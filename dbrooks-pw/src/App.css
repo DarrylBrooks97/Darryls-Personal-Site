@@ -1,14 +1,118 @@
-header{
-  background-color: lightslategray;
-  display: flex;
+@font-face {
+  font-family: Montserrat;
+  src: url("./Montserrat/Montserrat-Regular.ttf");
 }
-.page-links{
-  display: flex;
-}
-nav{
-  flex:2;
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.nav-bar{
-  text-decoration: none;
+@media screen and (max-width: 500px) {
+  p,
+  p1,
+  p3 {
+    color: #fafaf6;
+  }
+
+  p,
+  p3 {
+    font-family: Montserrat;
+    font-size: 2.5em;
+  }
+
+  p {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  p1 {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5em;
+  }
+
+  p3 {
+    position: absolute;
+    text-align: center;
+    max-height: 550px;
+    left: 47%;
+    top: 32%;
+  }
+
+  .home-link {
+    color: #e2c044;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    top: 70%;
+    left: 50%;
+  }
+}
+
+body {
+  background: #3f4043;
+}
+@media screen and (min-width: 501px) {
+  p,
+  p1,
+  p3 {
+    color: #fafaf6;
+  }
+
+  p,
+  p3 {
+    font-family: Montserrat;
+    font-size: 3.5em;
+  }
+
+  p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  p1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 300%);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2.5em;
+  }
+
+  p3 {
+    position: absolute;
+    left: 49%;
+    top: 42%;
+  }
+
+  .home-link {
+    color: #e2c044;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    top: 70%;
+    left: 50%;
+  }
+}
+
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
+    infinite;
 }
