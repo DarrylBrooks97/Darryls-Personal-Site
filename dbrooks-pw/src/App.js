@@ -19,7 +19,9 @@ function App() {
           ]}
         />
       </p1>
-      <Button variant="contained">Check out my life</Button>
+      <div style={{position: 'absolute', bottom: '20%', left: '44%'}}>
+        <Button variant="contained" style={{backgroundColor: '#e2c044', textTransform: 'capitalize',color:'#3f4043',fontFamily: 'Montserrat'}}>Check out my life</Button>
+      </div>
     </div>
   );
 }
