@@ -15,6 +15,12 @@
 }
 
 @media screen and (max-width: 500px) {
+  .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   p,
   p1,
   p3 {
@@ -67,6 +73,12 @@ body {
   background: #3f4043;
 }
 @media screen and (min-width: 501px) {
+  .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   p,
   p1,
   p3 {
