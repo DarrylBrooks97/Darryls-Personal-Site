@@ -2,6 +2,11 @@
   font-family: Montserrat;
   src: url("./Montserrat/Montserrat-Regular.ttf");
 }
+.headline {
+  color: #fafaf6;
+  font-family: Montserrat;
+  font-size: x-large;
+}
 .home {
   display: flex;
 }
@@ -11,6 +16,6 @@
 }
 .picture {
   position: absolute;
-  width: 20%;
+  width: 50%;
   height: 50%;
 }
