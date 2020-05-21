@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("./Montserrat/Montserrat-Regular.ttf");
+}
+
+.home {
+  display: flex;
+}
+.home-div {
+  position: relative;
+  width: 88%;
+  height: auto;
+}
+.home-headline {
+  font-family: Montserrat;
+  font-size: 2.2em;
+  color: #fafaf6;
+  text-align: center;
+  border-bottom: 0.3125em solid #e2c044;
+  width: auto;
+}
+.home-picture {
+  position: absolute;
+  width: 30vw;
+  height: 30vh;
+}
+
+@media (max-width: 700px) {
+  .home {
+    display: block;
+  }
+  .home-div {
+    width: auto;
+    height: auto;
+  }
+  .home-headline {
+    font-size: 2em;
+    border-bottom: none;
+  }
+  .home-picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10vw;
+    height: 10vh;
+  }
+}
