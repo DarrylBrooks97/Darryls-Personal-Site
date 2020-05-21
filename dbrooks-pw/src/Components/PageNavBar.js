@@ -88,7 +88,14 @@ function PageNavBar(props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-nav">
             <Nav>
-              <Nav.Link href="#">About</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  setRedirect(true);
+                  setAbout(true);
+                }}
+              >
+                About
+              </Nav.Link>
               <Nav.Link
                 onClick={() => {
                   setRedirect(true);
