@@ -9,11 +9,20 @@ function Home() {
       <PageNavBar location="/home" />
       <div className="home-div">
         <div className="home-headline">{"cout<<About<<endl"}</div>
-        <img
-          className="home-picture"
-          src={require("./images/pic1.JPG")}
-          alt="pic"
-        />
+        <div className="home-content">
+          <img
+            className="home-picture"
+            src={require("./images/pic1.JPG")}
+            alt="pic"
+          />
+          <div className="txt-container">
+            <h1 className="about-txt">
+              Darryl Brooks is a senior Computer Engineering student from
+              Jacksonville, FL. He aspires to beome a Software Engineer
+              specifically in Full Stack development.
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   );

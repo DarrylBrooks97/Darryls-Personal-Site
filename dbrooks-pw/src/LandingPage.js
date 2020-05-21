@@ -22,8 +22,8 @@ function LandingPage() {
         <ReactRotatingText
           items={[
             'cout<<"Innovative";',
-            'cout<<"Relentless";',
             'cout<<"Ambitious";',
+            'cout<<"Extraordinary";',
           ]}
         />
       </p1>
