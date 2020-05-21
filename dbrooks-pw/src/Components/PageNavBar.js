@@ -25,15 +25,15 @@ function PageNavBar(props) {
 
   function routeChange() {
     if (redirect) {
-      if (about) {
+      if (about && props.location !== "/home") {
         history.push(props.location);
         return <Redirect to="/home" />;
       }
-      if (techX) {
+      if (techX && props.location !== "/techx") {
         history.push(props.location);
         return <Redirect to="/techx" />;
       }
-      if (contact) {
+      if (contact && props.location !== "/contact") {
         history.push(props.location);
         return <Redirect to="/contact" />;
       }
