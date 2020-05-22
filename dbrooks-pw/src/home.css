@@ -10,13 +10,16 @@
 .home {
   display: flex;
 }
+.h-contents {
+  position: relative;
+  display: block;
+  background-color: red;
+}
 .home-content {
   display: flex;
-  justify-content: space-evenly;
   position: absolute;
   top: 15vh;
   left: 12vh;
-  /* background-color: red; */
 }
 .home-div {
   position: relative;
@@ -25,19 +28,20 @@
 }
 .home-headline {
   font-family: Montserrat;
-  font-size: 1.9em;
+  font-size: 2.9em;
   color: #fafaf6;
   text-align: center;
-  border-bottom: 0.2125em solid #e2c044;
+  border-bottom: 0.1225em solid #e2c044;
   width: auto;
 }
 .home-picture {
   margin: 0px 5% 0px 0px;
-  width: calc(100vh - 12vh - 12%);
-  height: 50vh;
+  width: 40%;
+  height: 40%;
 }
 .txt-container {
   text-align: left;
+  width: 40%;
 }
 
 @media (max-width: 700px) {

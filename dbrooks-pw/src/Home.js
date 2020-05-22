@@ -9,18 +9,23 @@ function Home() {
       <PageNavBar location="/home" />
       <div className="home-div">
         <div className="home-headline">{"cout<<About<<endl"}</div>
-        <div className="home-content">
-          <img
-            className="home-picture"
-            src={require("./images/pic1.JPG")}
-            alt="pic"
-          />
-          <div className="txt-container">
-            <h1 className="about-txt">
-              Darryl Brooks is a senior Computer Engineering student from
-              Jacksonville, FL. He aspires to beome a Software Engineer
-              specifically in Full Stack development.
-            </h1>
+        <div className="h-contents">
+          <div className="home-content">
+            <img
+              className="home-picture"
+              src={require("./images/IMG_1829.JPG")}
+              alt="pic"
+            />
+            <div className="txt-container">
+              <h1 className="about-txt">
+                Darryl Brooks, an upcoming Software Engineer, was born in Tampa,
+                FL however, was raised in Jacksonville, FL. As a child he always
+                had a fasination in sciene & technology, where he was always
+                curious on how computers worked. His parents put him to the test
+                and enrolled him at Robert E. Lee High School for their rigorous
+                Engineering program.
+              </h1>
+            </div>
           </div>
         </div>
       </div>
