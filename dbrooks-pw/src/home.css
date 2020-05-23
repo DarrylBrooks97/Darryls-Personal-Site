@@ -6,21 +6,19 @@
   font-family: Montserrat;
   font-size: larger;
   color: #fafaf6;
+  margin: 12% 0px 0px 20%;
+}
+.h-contents {
+  list-style-type: none;
 }
 .home {
   display: flex;
 }
-.h-contents {
-  position: relative;
-  display: block;
-  background-color: red;
-}
+
 .home-content {
   display: flex;
-  position: absolute;
-  top: 15vh;
-  left: 12vh;
 }
+
 .home-div {
   position: relative;
   width: 88%;
@@ -34,16 +32,19 @@
   border-bottom: 0.1225em solid #e2c044;
   width: auto;
 }
-.home-picture {
-  margin: 0px 5% 0px 0px;
-  width: 40%;
-  height: 40%;
+.home-item {
+  /* margin: 50% 0; */
+  width: 100%;
+}
+.pictures {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .txt-container {
   text-align: left;
-  width: 40%;
+  width: 50%;
 }
-
 @media (max-width: 700px) {
   .home {
     display: block;
