@@ -43,7 +43,9 @@ function PageNavBar(props) {
   return (
     <div className="nav-bar">
       <div className="menu">
-        <h1 className="name">Darryl Brooks</h1>
+        <div>
+          <h1 className="name">Darryl Brooks</h1>
+        </div>
         <ul className="list">
           <li>
             <Button
@@ -93,6 +95,7 @@ function PageNavBar(props) {
                   setRedirect(true);
                   setAbout(true);
                 }}
+                style={{ color: "#e2c044" }}
               >
                 About
               </Nav.Link>
@@ -101,6 +104,7 @@ function PageNavBar(props) {
                   setRedirect(true);
                   setTechX(true);
                 }}
+                style={{ color: "#e2c044" }}
               >
                 Tech Experience
               </Nav.Link>
@@ -109,6 +113,7 @@ function PageNavBar(props) {
                   setRedirect(true);
                   setContact(true);
                 }}
+                style={{ color: "#e2c044" }}
               >
                 Contact
               </Nav.Link>
