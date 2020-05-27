@@ -2,20 +2,35 @@
   font-family: Montserrat;
   src: url("./Montserrat/Montserrat-Regular.ttf");
 }
-.headline {
-  color: #fafaf6;
-  font-family: Montserrat;
-  font-size: x-large;
+[aria-label="gallery"] {
+  border: 2px solid;
+  padding: 1rem;
+  overflow-x: scroll;
 }
-/* .home {
-  display: flex;
-} */
-.page-content-div {
+[aria-label="gallery"] ul {
+  white-space: nowrap;
+}
+
+[aria-label="gallery"] li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+[aria-label="gallery"] img {
+  max-height: 70vh;
+}
+.tech-div {
   position: relative;
   width: 88%;
+  height: auto;
 }
-/* .picture {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-} */
+.tech-headline {
+  font-family: Montserrat;
+  font-size: 2.9em;
+  color: #fafaf6;
+  text-align: center;
+  border-bottom: 0.1225em solid #e2c044;
+  width: auto;
+}
+.tech-home {
+  display: flex;
+}
