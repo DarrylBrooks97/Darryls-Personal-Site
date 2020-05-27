@@ -16,9 +16,9 @@ function LandingPage() {
 
   return (
     <div>
-      <p>Darryl Brooks II</p>
-      <p3>is</p3>
-      <p1>
+      <p className="my-name">Darryl Brooks II</p>
+      <p className="is">is</p>
+      <p className="rotating-items">
         <ReactRotatingText
           items={[
             'cout<<"Innovative";',
@@ -26,7 +26,7 @@ function LandingPage() {
             'cout<<"Extraordinary";',
           ]}
         />
-      </p1>
+      </p>
       {routeChange()}
       <div className="button">
         <Button

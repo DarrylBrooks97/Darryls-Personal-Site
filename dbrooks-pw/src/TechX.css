@@ -3,20 +3,42 @@
   src: url("./Montserrat/Montserrat-Regular.ttf");
 }
 [aria-label="gallery"] {
-  border: 2px solid;
   padding: 1rem;
   overflow-x: scroll;
 }
+[aria-label="gallery"] a {
+  text-decoration: none;
+}
 [aria-label="gallery"] ul {
   white-space: nowrap;
+  position: relative;
+  text-align: start;
 }
 
 [aria-label="gallery"] li {
   display: inline-block;
-  margin-right: 1rem;
+  text-align: center;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+[aria-label="gallery"] li li {
+  display: flex;
+  width: 50%;
+  /* background-color: red; */
+}
+[aria-label="gallery"] li li p {
+  overflow-wrap: break-word;
 }
 [aria-label="gallery"] img {
-  max-height: 70vh;
+  max-height: 60vh;
+}
+[aria-label="gallery"] h1,
+p,
+a {
+  color: #fafaf6;
+}
+[aria-label="gallery"] h1:hover {
+  cursor: pointer;
 }
 .tech-div {
   position: relative;
@@ -33,4 +55,43 @@
 }
 .tech-home {
   display: flex;
+}
+
+@media (max-width: 700px) {
+  [aria-label="gallery"] {
+    padding: 1rem;
+    overflow-x: scroll;
+  }
+  [aria-label="gallery"] img {
+    width: 50vh;
+  }
+  [aria-label="gallery"] li {
+    width: 50vh;
+
+    margin-right: 30rem;
+    margin-left: 1rem;
+  }
+  [aria-label="gallery"] li li {
+    text-align: start;
+    width: 100vh;
+  }
+  [aria-label="gallery"] p {
+    width: 50vh;
+    background-color: gold;
+  }
+  [aria-label="gallery"] ul {
+    width: 90vh;
+    background-color: firebrick;
+  }
+  .tech-div {
+    width: auto;
+    height: auto;
+  }
+  .tech-headline {
+    font-size: 2em;
+    border-bottom: none;
+  }
+  .tech-home {
+    display: block;
+  }
 }

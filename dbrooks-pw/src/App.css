@@ -21,19 +21,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  p,
-  p1,
-  p3 {
+  .my-name,
+  .is,
+  .rotating-items {
     color: #fafaf6;
   }
 
-  p,
-  p3 {
+  .my-name,
+  .is {
     font-family: Montserrat;
     font-size: 2.5em;
   }
 
-  p {
+  .my-name {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -41,7 +41,7 @@
     transform: translate(-50%, -50%);
   }
 
-  p1 {
+  .rotating-items {
     position: absolute;
     top: 33%;
     left: 50%;
@@ -50,7 +50,7 @@
     font-size: 1.5em;
   }
 
-  p3 {
+  .is {
     position: absolute;
     text-align: center;
     max-height: 550px;
@@ -79,26 +79,26 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  p,
-  p1,
-  p3 {
+  .my-name,
+  .rotating-items,
+  .is {
     color: #fafaf6;
   }
 
-  p,
-  p3 {
+  .my-name,
+  .is {
     font-family: Montserrat;
     font-size: 3.5em;
   }
 
-  p {
+  .my-name {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  p1 {
+  .rotating-items {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -107,7 +107,7 @@ body {
     font-size: 2.5em;
   }
 
-  p3 {
+  .is {
     position: absolute;
     left: 49%;
     top: 42%;
