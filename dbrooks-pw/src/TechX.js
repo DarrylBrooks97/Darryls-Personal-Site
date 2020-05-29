@@ -1,7 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavBar from "../src/Components/PageNavBar";
+import ReactRotatingText from "react-rotating-text";
 import "./TechX.css";
+import { Button } from "react-bootstrap";
 
 function TechX() {
   return (
@@ -9,7 +11,10 @@ function TechX() {
       <PageNavBar location="/techx" />
       <div className="tech-div">
         <div className="tech-headline">{"Tech Experience"}</div>
-        <div aria-label="gallery" tabindex="0" className="scroll-bar">
+        <p className="rotating">
+          <ReactRotatingText items={["Swipe --->"]} />
+        </p>
+        <div aria-label="gallery" tabIndex="0" className="scroll-bar">
           <ul>
             <li>
               <img src={require("./images/google.JPG")} alt="GoogleImage"></img>
@@ -89,7 +94,7 @@ function TechX() {
               </ul>
             </li>
             <li>
-              <img src={require("./images/uber.jpg")} alt="UberImage"></img>
+              <img src={require("./images/cleanPic.JPG")} alt="UberImage"></img>
               <h1>
                 <a
                   href="https://uncf.org/programs/hbcu-innovation-summit"
@@ -155,6 +160,167 @@ function TechX() {
               </ul>
             </li>
           </ul>
+        </div>
+        <br></br>
+        <br></br>
+        <div className="tech-skills-div">
+          <h1 className="tech-skills">Known Technologies</h1>
+          <hr style={{ width: "50vw" }}></hr>
+          <div className="row">
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/cplusplus.png")}
+                alt="c++"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/python.png")}
+                alt="python"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/github.png")}
+                alt="github"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/html.png")}
+                alt="html"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/css.png")}
+                alt="css"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/firebase.png")}
+                alt="firebase"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/c.png")}
+                alt="c"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/csharp.png")}
+                alt="csharp"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/linux.png")}
+                alt="linux"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/node.png")}
+                alt="node"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/photoshop.png")}
+                alt="photoshop"
+              />
+            </div>
+            <div className="skill-icon">
+              <img
+                className="tech-icon"
+                src={require("./images/reactjs.png")}
+                alt="reactjs"
+              />
+            </div>
+          </div>
+        </div>
+        <br></br>
+        <br></br>
+        <div className="tech-skills-div">
+          <h1 className="tech-skills">Some things I've built</h1>
+          <hr style={{ width: "50vw" }}></hr>
+          <div className="projects">
+            <div style={{ position: "relative", margin: "0px 0px 0px 5%" }}>
+              <img
+                src={require("./images/techbook.png")}
+                style={{ width: "40vw", height: "50%", float: "left" }}
+              ></img>
+              <div
+                style={{
+                  position: "absolute",
+                  top: "20vh",
+                  left: "60vh",
+                  width: "35vw",
+                  textAlign: "right",
+                }}
+              >
+                <h1 className="tech-skills">TechBook</h1>
+                <div
+                  style={{
+                    textAlign: "right",
+                    backgroundColor: "#808080",
+                    color: "#fafaf6",
+                  }}
+                >
+                  A social media platform created for the Google Tech Exchange
+                  Students to collaborate, stay connected, and give guidance to
+                  one another. Also built to promote the once in a life-time
+                  program for qualified Computer Science/Engineering HBCU/HSI
+                  Students.
+                </div>
+                <div>
+                  <ul
+                    style={{
+                      color: "#e2c044",
+                      display: "flex",
+                      listStyle: "none",
+                      float: "right",
+                    }}
+                  >
+                    <li style={{ margin: "0px 10px 0px 10px" }}>React</li>
+                    <li style={{ margin: "0px 10px 0px 10px" }}>Node.js</li>
+                    <li style={{ margin: "0px 10px 0px 10px" }}>Firebase</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br></br>
+        <br></br>
+        <div className="tech-skills-div">
+          <h1 className="tech-skills">Check out my Résumé!</h1>
+          <hr style={{ width: "50vw" }}></hr>
+          <Button
+            variant="contained"
+            style={{
+              backgroundColor: "#e2c044",
+              textTransform: "capitalize",
+              color: "#3f4043",
+              fontFamily: "Montserrat",
+            }}
+          >
+            Grab a Copy 📥
+          </Button>
         </div>
       </div>
     </div>

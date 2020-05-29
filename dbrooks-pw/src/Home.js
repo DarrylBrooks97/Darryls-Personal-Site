@@ -44,17 +44,6 @@ function Home() {
                     . He is now entering his senior year and is actively
                     applying full-time software engineering positions.
                     <br></br>
-                    <br></br>
-                    Check out{" "}
-                    <a
-                      href="https://www.eng.famu.fsu.edu/news/darryl-brooks-accepted-in-google-tech-exchange-program"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      this
-                    </a>{" "}
-                    article about my acceptance into the Google Tech Exchange
-                    Program !
                   </h1>
                 </div>
               </div>
@@ -77,7 +66,7 @@ function Home() {
                 <div className="about-content-div">
                   <img
                     className="pictures"
-                    src={require("./images/cleanPic.JPG")}
+                    src={require("./images/MS.jpg")}
                     alt="pic"
                   />
                 </div>

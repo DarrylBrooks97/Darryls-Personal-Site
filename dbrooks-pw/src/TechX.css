@@ -11,8 +11,6 @@
 }
 [aria-label="gallery"] ul {
   white-space: nowrap;
-  position: relative;
-  text-align: start;
 }
 
 [aria-label="gallery"] li {
@@ -23,11 +21,6 @@
 }
 [aria-label="gallery"] li li {
   display: flex;
-  width: 50%;
-  /* background-color: red; */
-}
-[aria-label="gallery"] li li p {
-  overflow-wrap: break-word;
 }
 [aria-label="gallery"] img {
   max-height: 60vh;
@@ -40,10 +33,28 @@ a {
 [aria-label="gallery"] h1:hover {
   cursor: pointer;
 }
+.projects {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+.rotating {
+  text-align: center;
+  font-size: xx-large;
+  color: #fafaf6;
+}
+.row {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-gap: 10px;
+  margin: 0px auto 0px 30vw;
+}
+.tech-icon {
+  width: 70px;
+}
 .tech-div {
   position: relative;
   width: 88%;
-  height: auto;
 }
 .tech-headline {
   font-family: Montserrat;
@@ -56,32 +67,49 @@ a {
 .tech-home {
   display: flex;
 }
-
+.tech-skills {
+  color: #fafaf6;
+  font-weight: lighter;
+}
+.tech-skills-div {
+  text-align: center;
+}
 @media (max-width: 700px) {
   [aria-label="gallery"] {
-    padding: 1rem;
-    overflow-x: scroll;
+    display: grid;
   }
   [aria-label="gallery"] img {
-    width: 50vh;
+    position: inherit;
+    top: 0px;
+    width: 90%;
   }
   [aria-label="gallery"] li {
-    width: 50vh;
-
-    margin-right: 30rem;
-    margin-left: 1rem;
+    position: relative;
+    width: 45vh;
+    margin-right: 5rem;
+    margin-left: 0rem;
   }
   [aria-label="gallery"] li li {
-    text-align: start;
+    display: flex;
+  }
+  [aria-label="gallery"] li li p {
+    white-space: normal;
+    text-align: left;
     width: 100vh;
   }
-  [aria-label="gallery"] p {
-    width: 50vh;
-    background-color: gold;
+  .row {
+    grid-template-columns: 85px 85px 85px 85px;
+    grid-gap: 5px;
+    margin: 0px 0px 0px 0px;
   }
-  [aria-label="gallery"] ul {
-    width: 90vh;
-    background-color: firebrick;
+  .tech-skills {
+    font-size: xx-large;
+  }
+  /* .tech-skills-div {
+    widt
+  } */
+  .tech-icon {
+    width: 50px;
   }
   .tech-div {
     width: auto;
@@ -93,5 +121,8 @@ a {
   }
   .tech-home {
     display: block;
+  }
+  [aria-label="gallery"] a {
+    font-size: xx-large;
   }
 }
