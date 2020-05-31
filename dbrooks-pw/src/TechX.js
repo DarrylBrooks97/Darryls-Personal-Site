@@ -259,10 +259,17 @@ function TechX() {
           <h1 className="tech-skills">Some things I've built</h1>
           <hr style={{ width: "50vw" }}></hr>
           <div className="projects">
-            <div style={{ position: "relative", margin: "0px 0px 0px 5%" }}>
+            <div
+              style={{
+                position: "relative",
+                margin: "0px 0px 0px 10%",
+                width: "68vw",
+              }}
+            >
               <img
                 src={require("./images/techbook.png")}
                 style={{ width: "40vw", height: "50%", float: "left" }}
+                alt="techbook"
               ></img>
               <div
                 style={{
@@ -277,8 +284,8 @@ function TechX() {
                 <div
                   style={{
                     textAlign: "right",
-                    backgroundColor: "#808080",
-                    color: "#fafaf6",
+                    backgroundColor: "rgba(85,12,24,0.8)",
+                    color: "#FAFAF6",
                   }}
                 >
                   A social media platform created for the Google Tech Exchange
@@ -303,6 +310,58 @@ function TechX() {
                 </div>
               </div>
             </div>
+            <br></br>
+            <br></br>
+            <div
+              style={{
+                position: "relative",
+                margin: "0px 0px 0px 10%",
+                width: "68vw",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "35vw",
+                  textAlign: "left",
+                  top: "20vh",
+                }}
+              >
+                <h1 className="tech-skills">Priority Task Scheduler</h1>
+                <div
+                  style={{
+                    textAlign: "left",
+                    backgroundColor: "rgba(85,12,24,0.82)",
+                    color: "#FAFAF6",
+                  }}
+                >
+                  A hackathon creation built for incoming college students to
+                  learn how priotize their assignments with daily life events.
+                  The app uses imported class assignments from Canvas to feed
+                  the machine learning model to determine what tasks should be
+                  completed first.
+                </div>
+                <div>
+                  <ul
+                    style={{
+                      color: "#e2c044",
+                      display: "flex",
+                      listStyle: "none",
+                      float: "left",
+                    }}
+                  >
+                    <li style={{ margin: "0px 10px 0px 10px" }}>Flutter</li>
+                    <li style={{ margin: "0px 10px 0px 10px" }}>Python</li>
+                    <li style={{ margin: "0px 10px 0px 10px" }}>Canvas API</li>
+                  </ul>
+                </div>
+              </div>
+              <img
+                src={require("./images/hackfsu.png")}
+                style={{ width: "40vw", float: "right" }}
+                alt="hackfsu"
+              ></img>
+            </div>
           </div>
         </div>
         <br></br>
@@ -319,7 +378,7 @@ function TechX() {
               fontFamily: "Montserrat",
             }}
           >
-            Grab a Copy 📥
+            Grab a Copy <span>📥</span>
           </Button>
         </div>
       </div>

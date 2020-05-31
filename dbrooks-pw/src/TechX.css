@@ -34,7 +34,6 @@ a {
   cursor: pointer;
 }
 .projects {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
 }
@@ -69,7 +68,6 @@ a {
 }
 .tech-skills {
   color: #fafaf6;
-  font-weight: lighter;
 }
 .tech-skills-div {
   text-align: center;
