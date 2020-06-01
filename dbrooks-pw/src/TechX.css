@@ -33,9 +33,52 @@ a {
 [aria-label="gallery"] h1:hover {
   cursor: pointer;
 }
+.caption-textbox-left,
+.caption-textbox-right {
+  background-color: rgba(85, 12, 24, 0.8);
+  color: #fafaf6;
+}
+.caption-textbox-left {
+  text-align: left;
+}
+.caption-textbox-right {
+  text-align: right;
+}
+.floating-text-left {
+  position: absolute;
+  top: 20vh;
+  width: 35vw;
+  text-align: left;
+}
+.floating-text-right {
+  position: absolute;
+  top: 20vh;
+  left: 33vw;
+  width: 35vw;
+  text-align: right;
+}
 .projects {
   display: flex;
   flex-direction: column;
+}
+
+.picture-left,
+.picture-right {
+  width: 40vw;
+}
+.picture-left {
+  float: left;
+}
+.picture-right {
+  float: right;
+}
+.project-div {
+  position: relative;
+  margin: 0px 0px 0px 10%;
+  width: 68vw;
+}
+.project-div li {
+  margin: 0px 10px 0px 10px;
 }
 .rotating {
   text-align: center;
@@ -47,6 +90,21 @@ a {
   grid-template-columns: 100px 100px 100px 100px;
   grid-gap: 10px;
   margin: 0px auto 0px 30vw;
+}
+.txt-container {
+  width: 50%;
+}
+.used-tech-left ul,
+.used-tech-right ul {
+  color: #e2c044;
+  display: flex;
+  list-style-type: none;
+}
+.used-tech-left ul {
+  float: left;
+}
+.used-tech-right ul {
+  float: right;
 }
 .tech-icon {
   width: 70px;
@@ -71,6 +129,7 @@ a {
 }
 .tech-skills-div {
   text-align: center;
+  /* background-color: red; */
 }
 @media (max-width: 700px) {
   [aria-label="gallery"] {
@@ -95,6 +154,30 @@ a {
     text-align: left;
     width: 100vh;
   }
+  .caption-textbox-left,
+  .caption-textbox-right {
+    text-align: center;
+  }
+  .floating-text-left,
+  .floating-text-right {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 0px 0px 0px 10vh;
+    text-align: center;
+  }
+  .picture-left,
+  .picture-right {
+    width: 100vw;
+    height: 50%;
+    float: none;
+  }
+  .project-div {
+    position: relative;
+    margin: 0px 0px 0px 0vh;
+    width: 68vw;
+  }
   .row {
     grid-template-columns: 85px 85px 85px 85px;
     grid-gap: 5px;
@@ -103,9 +186,6 @@ a {
   .tech-skills {
     font-size: xx-large;
   }
-  /* .tech-skills-div {
-    widt
-  } */
   .tech-icon {
     width: 50px;
   }
@@ -119,6 +199,11 @@ a {
   }
   .tech-home {
     display: block;
+  }
+  .used-tech-left ul,
+  .used-tech-right ul {
+    float: none;
+    text-align: center;
   }
   [aria-label="gallery"] a {
     font-size: xx-large;

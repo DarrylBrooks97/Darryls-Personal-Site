@@ -19,11 +19,13 @@ a {
 .about-txt-div {
   width: 48%;
 }
+
 .copyright {
   text-align: center;
   color: #e2c044;
   margin: 5% 0px 0px 0px;
 }
+
 .fun-fact-div {
   width: 52%;
 }
@@ -75,9 +77,7 @@ hr {
   height: 100%;
   object-fit: contain;
 }
-.txt-container {
-  width: 50%;
-}
+
 @media (max-width: 700px) {
   .about-content-div {
     width: auto;

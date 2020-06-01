@@ -259,108 +259,80 @@ function TechX() {
           <h1 className="tech-skills">Some things I've built</h1>
           <hr style={{ width: "50vw" }}></hr>
           <div className="projects">
-            <div
-              style={{
-                position: "relative",
-                margin: "0px 0px 0px 10%",
-                width: "68vw",
-              }}
-            >
+            <div className="project-div">
               <img
                 src={require("./images/techbook.png")}
-                style={{ width: "40vw", height: "50%", float: "left" }}
+                className="picture-left"
                 alt="techbook"
               ></img>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "20vh",
-                  left: "60vh",
-                  width: "35vw",
-                  textAlign: "right",
-                }}
-              >
+              <div className="floating-text-right">
                 <h1 className="tech-skills">TechBook</h1>
-                <div
-                  style={{
-                    textAlign: "right",
-                    backgroundColor: "rgba(85,12,24,0.8)",
-                    color: "#FAFAF6",
-                  }}
-                >
+                <div className="caption-textbox-right">
                   A social media platform created for the Google Tech Exchange
                   Students to collaborate, stay connected, and give guidance to
                   one another. Also built to promote the once in a life-time
                   program for qualified Computer Science/Engineering HBCU/HSI
                   Students.
                 </div>
-                <div>
-                  <ul
-                    style={{
-                      color: "#e2c044",
-                      display: "flex",
-                      listStyle: "none",
-                      float: "right",
-                    }}
-                  >
-                    <li style={{ margin: "0px 10px 0px 10px" }}>React</li>
-                    <li style={{ margin: "0px 10px 0px 10px" }}>Node.js</li>
-                    <li style={{ margin: "0px 10px 0px 10px" }}>Firebase</li>
+                <div className="used-tech-right">
+                  <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Firebase</li>
                   </ul>
                 </div>
               </div>
             </div>
             <br></br>
             <br></br>
-            <div
-              style={{
-                position: "relative",
-                margin: "0px 0px 0px 10%",
-                width: "68vw",
-              }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  width: "35vw",
-                  textAlign: "left",
-                  top: "20vh",
-                }}
-              >
+            <div className="project-div">
+              <div className="floating-text-left">
                 <h1 className="tech-skills">Priority Task Scheduler</h1>
-                <div
-                  style={{
-                    textAlign: "left",
-                    backgroundColor: "rgba(85,12,24,0.82)",
-                    color: "#FAFAF6",
-                  }}
-                >
+                <div className="caption-textbox-left">
                   A hackathon creation built for incoming college students to
                   learn how priotize their assignments with daily life events.
                   The app uses imported class assignments from Canvas to feed
                   the machine learning model to determine what tasks should be
                   completed first.
                 </div>
-                <div>
-                  <ul
-                    style={{
-                      color: "#e2c044",
-                      display: "flex",
-                      listStyle: "none",
-                      float: "left",
-                    }}
-                  >
-                    <li style={{ margin: "0px 10px 0px 10px" }}>Flutter</li>
-                    <li style={{ margin: "0px 10px 0px 10px" }}>Python</li>
-                    <li style={{ margin: "0px 10px 0px 10px" }}>Canvas API</li>
+                <div className="used-tech-left">
+                  <ul>
+                    <li>Flutter</li>
+                    <li>Python</li>
+                    <li>Canvas API</li>
                   </ul>
                 </div>
               </div>
               <img
                 src={require("./images/hackfsu.png")}
-                style={{ width: "40vw", float: "right" }}
+                className="picture-right"
                 alt="hackfsu"
               ></img>
+            </div>
+            <br></br>
+            <br></br>
+            <div className="project-div">
+              <img
+                src={require("./images/ac.png")}
+                className="picture-left"
+                alt="ac"
+              ></img>
+              <div className="floating-text-right">
+                <h1 className="tech-skills">AirWise</h1>
+                <div className="caption-textbox-right">
+                  A Senior Design class project built using machine learning to
+                  predict user's preferred temperature within individual rooms.
+                  This device is portable and allows multiple users to have
+                  their own individualized room temperature.
+                </div>
+                <div className="used-tech-right">
+                  <ul>
+                    <li>Python</li>
+                    <li>Raspberry Pi</li>
+                    <li>Tensor Flow</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
