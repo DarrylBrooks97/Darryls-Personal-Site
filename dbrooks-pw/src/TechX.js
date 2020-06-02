@@ -286,7 +286,7 @@ function TechX() {
             <br></br>
             <br></br>
             <div className="project-div">
-              <div className="floating-text-left">
+              <div className="floating-text-left" style={{ order: "1" }}>
                 <h1 className="tech-skills">Priority Task Scheduler</h1>
                 <div className="caption-textbox-left">
                   A hackathon creation built for incoming college students to

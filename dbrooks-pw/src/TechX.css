@@ -46,20 +46,16 @@ a {
 }
 .floating-text-left {
   position: absolute;
-  top: 20vh;
+  top: 13%;
   width: 35vw;
   text-align: left;
 }
 .floating-text-right {
   position: absolute;
-  top: 20vh;
+  top: 13%;
   left: 33vw;
   width: 35vw;
   text-align: right;
-}
-.projects {
-  display: flex;
-  flex-direction: column;
 }
 
 .picture-left,
@@ -71,6 +67,10 @@ a {
 }
 .picture-right {
   float: right;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
 }
 .project-div {
   position: relative;
@@ -89,11 +89,9 @@ a {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px;
   grid-gap: 10px;
-  margin: 0px auto 0px 30vw;
+  margin: 0px 0px 0px 30vw;
 }
-.txt-container {
-  width: 50%;
-}
+
 .used-tech-left ul,
 .used-tech-right ul {
   color: #e2c044;
@@ -129,9 +127,8 @@ a {
 }
 .tech-skills-div {
   text-align: center;
-  /* background-color: red; */
 }
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   [aria-label="gallery"] {
     display: grid;
   }
@@ -157,14 +154,17 @@ a {
   .caption-textbox-left,
   .caption-textbox-right {
     text-align: center;
+    position: relative;
+    left: 10%;
+    width: 80%;
   }
+
   .floating-text-left,
   .floating-text-right {
     position: relative;
     top: auto;
     left: auto;
     width: 100%;
-    margin: 0px 0px 0px 10vh;
     text-align: center;
   }
   .picture-left,
@@ -173,15 +173,18 @@ a {
     height: 50%;
     float: none;
   }
+
   .project-div {
-    position: relative;
-    margin: 0px 0px 0px 0vh;
-    width: 68vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100vw;
   }
   .row {
-    grid-template-columns: 85px 85px 85px 85px;
+    grid-template-columns: 5em 5em 5em 5em;
     grid-gap: 5px;
-    margin: 0px 0px 0px 0px;
+    margin-left: 0px;
+    justify-content: center;
   }
   .tech-skills {
     font-size: xx-large;
@@ -203,7 +206,10 @@ a {
   .used-tech-left ul,
   .used-tech-right ul {
     float: none;
-    text-align: center;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+    left: 10%;
   }
   [aria-label="gallery"] a {
     font-size: xx-large;

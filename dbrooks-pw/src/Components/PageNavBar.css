@@ -34,19 +34,13 @@ ul {
   padding-inline-start: 0px;
 }
 
-/* @media screen and (max-width: 1600px) {
-  .name {
-    margin: ;
-  }
-} */
-
 @media screen and (max-width: 950px) {
   .list li Button {
     max-width: 12%;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .hamburger {
     display: block;
   }
