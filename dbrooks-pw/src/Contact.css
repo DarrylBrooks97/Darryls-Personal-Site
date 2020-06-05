@@ -19,21 +19,22 @@
 }
 .contact-info {
   display: flex;
-  justify-content: space-evenly;
-  margin: 5% 0px 0px 15%;
-  width: 100%;
-  background-color: lawngreen;
+  justify-content: space-between;
+  margin: 1% 0px 0px 30%;
+  width: 37%;
+  /* background-color: red; */
 }
 .contact-title {
-  margin: 2% 0px 0px 0px;
+  margin: 2% 0px 0px 15%;
   font-family: Montserrat;
   font-size: 1.9em;
   font-weight: 500;
   color: #e2c044;
+  /* background-color: aliceblue; */
   text-align: center;
-  width: auto;
+  width: 70%;
 }
 .message-div {
-  margin: 5% 0px 0px 15%;
-  width: 70%;
+  margin: 1% 0px 0px 30%;
+  width: 30%;
 }
