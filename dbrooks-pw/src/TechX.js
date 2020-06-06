@@ -356,7 +356,10 @@ function TechX() {
               href={require("./public/Brooks_Darryl_Resume.pdf")}
               style={{ textDecoration: "none" }}
             >
-              Grab a Copy<span>📥</span>
+              Grab a Copy
+              <span role="img" aria-label="inbox-emoji">
+                📥
+              </span>
             </a>
           </Button>
         </div>

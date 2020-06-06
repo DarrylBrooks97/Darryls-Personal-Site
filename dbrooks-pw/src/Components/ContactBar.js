@@ -9,6 +9,7 @@ function ContactBar() {
           <a
             href="https://www.linkedin.com/in/darryl-brooks-ii-a17a46140/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               src={require("../images/li.png")}
