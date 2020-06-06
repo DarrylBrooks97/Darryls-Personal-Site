@@ -49,13 +49,13 @@ a:hover {
 }
 .floating-text-left {
   position: absolute;
-  top: 13%;
+  top: 33%;
   width: 35vw;
   text-align: left;
 }
 .floating-text-right {
   position: absolute;
-  top: 13%;
+  top: 33%;
   left: 33vw;
   width: 35vw;
   text-align: right;
