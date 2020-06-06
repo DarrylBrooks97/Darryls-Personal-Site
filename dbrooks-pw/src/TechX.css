@@ -33,6 +33,9 @@ a {
 [aria-label="gallery"] h1:hover {
   cursor: pointer;
 }
+a:hover {
+  color: white;
+}
 .caption-textbox-left,
 .caption-textbox-right {
   background-color: rgba(85, 12, 24, 0.8);

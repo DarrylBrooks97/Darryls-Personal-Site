@@ -350,7 +350,13 @@ function TechX() {
               fontFamily: "Montserrat",
             }}
           >
-            Grab a Copy <span>📥</span>
+            <a
+              download
+              href={require("./public/Brooks_Darryl_Resume.pdf")}
+              style={{ textDecoration: "none" }}
+            >
+              Grab a Copy<span>📥</span>
+            </a>
           </Button>
         </div>
       </div>
