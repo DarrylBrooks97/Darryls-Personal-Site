@@ -86,7 +86,12 @@ function PageNavBar(props) {
         </ul>
       </div>
       <div className="hamburger">
-        <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar
+          className="navbar fixed-top"
+          bg="dark"
+          expand="lg"
+          variant="dark"
+        >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-nav">
             <Nav>

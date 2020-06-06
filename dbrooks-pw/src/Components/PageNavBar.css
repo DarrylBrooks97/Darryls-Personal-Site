@@ -25,9 +25,14 @@
   margin: 5% 0px 0px 25%;
 }
 .nav-bar {
+  display: flex;
   border-right: 0.3125em solid #e2c044;
   width: 12%;
   height: auto;
+  justify-content: center;
+}
+.menu {
+  position: fixed;
 }
 ul {
   margin-block-end: 0em;
@@ -49,7 +54,8 @@ ul {
     display: none;
   }
   .nav-bar {
-    width: 100vw;
+    display: block;
+    width: 100%;
     height: auto;
     border-right: none;
     border-bottom: 0.3125em solid #e2c044;
