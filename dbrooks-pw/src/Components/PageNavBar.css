@@ -54,6 +54,7 @@ ul {
     display: none;
   }
   .nav-bar {
+    margin-bottom: 15%;
     display: block;
     width: 100%;
     height: auto;

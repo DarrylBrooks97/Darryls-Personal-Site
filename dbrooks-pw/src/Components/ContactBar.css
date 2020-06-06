@@ -1,0 +1,39 @@
+#github,
+#instagram,
+#linkedin,
+#twitter {
+  transition: transform 0.2s;
+}
+
+#github:hover,
+#instagram:hover,
+#linkedin:hover,
+#twitter:hover {
+  transform: scale(1.2);
+}
+.contact-bar {
+  width: 50%;
+  margin-top: 5%;
+}
+.copyright {
+  text-align: center;
+  color: #e2c044;
+  margin: 5% 0px 0px 0px;
+}
+.social-medias {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-medias img {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 850px) {
+  .contact-bar {
+    width: auto;
+    margin: 10% 0% 3% 0%;
+    /* margin-bottom: 3%; */
+  }
+}

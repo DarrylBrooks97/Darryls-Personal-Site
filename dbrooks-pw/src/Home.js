@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavBar from "./Components/PageNavBar";
+import ContactBar from "../src/Components/ContactBar";
 import "./home.css";
 
 function Home() {
@@ -95,8 +96,8 @@ function Home() {
               </div>
             </li>
           </ul>
-          <div className="copyright">
-            © 2020 Darryl Brooks. All rights reserved.
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ContactBar />
           </div>
         </div>
       </div>

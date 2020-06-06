@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavBar from "../src/Components/PageNavBar";
+import ContactBar from "../src/Components/ContactBar";
 import ReactRotatingText from "react-rotating-text";
 import "./TechX.css";
 import { Button } from "react-bootstrap";
@@ -358,6 +359,9 @@ function TechX() {
               Grab a Copy<span>📥</span>
             </a>
           </Button>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <ContactBar />
         </div>
       </div>
     </div>
