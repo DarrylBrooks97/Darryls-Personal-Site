@@ -350,7 +350,10 @@ function TechX() {
               fontFamily: "Montserrat",
             }}
           >
-            Grab a Copy <span>📥</span>
+            Grab a Copy{" "}
+            <span role="img" aria-label="inbox-emoji">
+              📥
+            </span>
           </Button>
         </div>
       </div>

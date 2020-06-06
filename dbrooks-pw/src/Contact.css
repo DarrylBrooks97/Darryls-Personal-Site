@@ -4,10 +4,12 @@
 }
 .contact {
   display: flex;
+  height: 100vh;
 }
 .contact-div {
   position: relative;
   width: 88%;
+  height: auto;
 }
 .contact-headline {
   font-family: Montserrat;
@@ -19,22 +21,43 @@
 }
 .contact-info {
   display: flex;
-  justify-content: space-between;
-  margin: 1% 0px 0px 30%;
-  width: 37%;
-  /* background-color: red; */
+  width: 70%;
+  margin: 0px 0px 0px 15%;
 }
 .contact-title {
-  margin: 2% 0px 0px 15%;
+  margin: 5% 0px 0px 15%;
   font-family: Montserrat;
   font-size: 1.9em;
   font-weight: 500;
   color: #e2c044;
-  /* background-color: aliceblue; */
   text-align: center;
   width: 70%;
 }
 .message-div {
-  margin: 1% 0px 0px 30%;
-  width: 30%;
+  margin: 1% 0px 0px 15%;
+  width: 70%;
+}
+#your-message,
+#your-email,
+#your-name {
+  opacity: 0;
+  color: #e2c044;
+}
+
+@media (max-width: 850px) {
+  .contact {
+    display: block;
+  }
+  .contact-div {
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+  .contact-headline {
+    font-size: 2em;
+    border-bottom: none;
+  }
+  .contact-info {
+    display: block;
+  }
 }

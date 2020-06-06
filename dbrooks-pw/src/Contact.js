@@ -2,12 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavBar from "../src/Components/PageNavBar";
 import "./Contact.css";
-import { FormControl, Button, InputBase, InputLabel } from "@material-ui/core";
-import { fade, withStyles, makeStyles } from "@material-ui/core/styles";
+import { FormControl, Button, InputBase } from "@material-ui/core";
+import { fade, withStyles } from "@material-ui/core/styles";
 import axios from "axios";
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
+    width: "9%",
     "label + &": {
       marginTop: theme.spacing(3),
     },
@@ -15,8 +16,7 @@ const BootstrapInput = withStyles((theme) => ({
   input: {
     borderRadius: 2,
     position: "relative",
-    backgroundColor: "white",
-    color: "black",
+    color: "white",
     border: "3px solid #ffff",
     fontSize: 18,
     padding: "10px 12px",
@@ -41,32 +41,39 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    // display: "flex",
-    // justifyContent: "space-around",
-  },
-  margin: {
-    // margin: theme.spacing(1),
-  },
-}));
-
 function handleSubmit(e) {
   e.preventDefault();
+  const name = document.getElementById("name").value;
+  const mail = document.getElementById("mail").value;
+  const message = document.getElementById("message").value;
+
+  if (message.length > 1000) {
+    alert("Message size is too big !");
+    return;
+  }
+  if (name.length > 24) {
+    alert("Please enter only your first name");
+    return;
+  }
+  if (mail.length > 40) {
+    alert("Please enter a different email that is shorter");
+    return;
+  }
 
   axios
     .post("http://localhost:8080/api/form", {
-      name: document.getElementById("name").value,
-      mail: document.getElementById("mail").value,
-      message: document.getElementById("message").value,
+      name: name,
+      mail: mail,
+      message: message,
     })
     .then(() => {
       alert("Submited!");
-      resetForm();
     })
     .catch((e) => {
       alert(e);
     });
+  alert("Thank you for contacting me. You should hear back within 1-3 days!");
+  resetForm();
 }
 function resetForm() {
   document.getElementById("name").value = "";
@@ -74,59 +81,64 @@ function resetForm() {
   document.getElementById("message").value = "";
 }
 
-function TechX() {
-  const classes = useStyles();
+const customShrink = (id) => {
+  document.getElementById(id).style.transition = "all 0.7s";
+  document.getElementById(id).style.opacity = "1";
+};
 
+function TechX() {
   return (
     <div className="contact">
       <PageNavBar location="/contact" />
       <div className="contact-div">
         <div className="contact-headline">{"Contact"}</div>
         <div className="contact-title">{"Lets Chat"}</div>
-        <form className={classes.root} onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <div className="contact-info">
-            <FormControl className={classes.margin}>
-              <InputLabel shrink style={{ color: "#e2c044" }}>
-                yourName
-              </InputLabel>
+            <FormControl
+              style={{
+                width: "100%",
+                margin: "0px 15% 0px 0px",
+              }}
+            >
+              <p id="your-name">yourName</p>
               <BootstrapInput
                 type="text"
                 id="name"
                 required
                 placeholder="cin>>yourName;"
-                style={{ color: "white", width: "120%" }}
+                onClick={() => customShrink("your-name")}
+                style={{ color: "white", width: "100%" }}
               />
             </FormControl>
-            <FormControl className={classes.margin}>
-              <InputLabel shrink style={{ color: "#e2c044" }}>
-                yourEmail
-              </InputLabel>
+            <FormControl style={{ width: "100%" }}>
+              <p id="your-email">yourEmail</p>
               <BootstrapInput
                 type="email"
                 id="mail"
                 required
                 placeholder="cin>>yourEmail;"
-                style={{ color: "black", width: "120%" }}
+                onClick={() => customShrink("your-email")}
+                style={{ color: "black", width: "100%" }}
               />
             </FormControl>
           </div>
 
           <div className="message-div">
-            <FormControl>
-              <InputLabel shrink style={{ color: "#e2c044" }}>
-                yourMessage
-              </InputLabel>
+            <FormControl style={{ width: "100%" }}>
+              <p id="your-message">yourMessage</p>
               <BootstrapInput
                 type="text"
                 required
                 placeholder="cin>>yourMessage;"
                 style={{
-                  color: "white",
-                  width: "300%",
+                  color: "black",
+                  width: "100%",
                 }}
+                onClick={() => customShrink("your-message")}
                 id="message"
                 multiline
-                rows={3}
+                rows={15}
               />
             </FormControl>
           </div>
