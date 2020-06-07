@@ -67,13 +67,21 @@ function handleSubmit(e) {
       mail: mail,
       message: message,
     })
-    .then(() => {
-      alert("Submited!");
+    .then((e) => {
+      if (e.data === "success") {
+        alert(
+          "Thank you for contacting me. You should hear back within 1-3 days!"
+        );
+      } else {
+        alert(
+          "Failed to send message. Try again or send me an email at darrylbrooks13@gmail.com !"
+        );
+      }
     })
     .catch((e) => {
       alert(e);
     });
-  alert("Thank you for contacting me. You should hear back within 1-3 days!");
+
   resetForm();
 }
 function resetForm() {
