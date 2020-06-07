@@ -4,11 +4,13 @@ const nodemailer = require("nodemailer");
 const rateLimit = require("express-rate-limit");
 const app = express();
 const cors = require("cors");
+const helmet = require("helmet");
 require("dotenv").config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+app.use(helmet());
 
 app.use(
   rateLimit({
@@ -35,9 +37,11 @@ app.post("/api/form", (req, res) => {
     },
     (err, data) => {
       if (err) {
+        res.send("fail");
         console.log(`An Error has occurred: ${err}`);
       } else {
-        console.log(data);
+        res.send("success");
+        // console.log(data);
       }
     }
   );

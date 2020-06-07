@@ -42,7 +42,7 @@ function Home() {
                       Florida A&M University
                     </a>
                     . He is now entering his senior year and is actively
-                    applying full-time software engineering positions.
+                    applying to full-time Software engineering positions.
                     <br></br>
                   </h1>
                 </div>
