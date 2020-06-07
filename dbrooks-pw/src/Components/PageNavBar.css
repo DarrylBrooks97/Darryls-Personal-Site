@@ -24,6 +24,7 @@
   font-size: x-large;
   margin: 5% 0px 0px 25%;
 }
+
 .nav-bar {
   display: flex;
   border-right: 0.3125em solid #e2c044;
@@ -55,10 +56,9 @@ ul {
   }
   .nav-bar {
     margin-bottom: 15%;
-    display: block;
-    width: 100%;
-    height: auto;
     border-right: none;
+  }
+  #nav {
     border-bottom: 0.3125em solid #e2c044;
   }
 }

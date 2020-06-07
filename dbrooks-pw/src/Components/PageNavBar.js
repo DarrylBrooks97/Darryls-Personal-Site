@@ -91,6 +91,7 @@ function PageNavBar(props) {
           bg="dark"
           expand="lg"
           variant="dark"
+          id="nav"
         >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-nav">

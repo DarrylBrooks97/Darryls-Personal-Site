@@ -14,7 +14,7 @@ app.use(helmet());
 
 app.use(
   rateLimit({
-    windowMs: 30 * 1000,
+    windowMs: 60 * 1000,
     max: 3,
   })
 );
