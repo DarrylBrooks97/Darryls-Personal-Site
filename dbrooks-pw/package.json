@@ -1,5 +1,6 @@
 {
   "name": "dbrooks-pw",
+  "homepage": "http://darrylbrooks97.github.io/DBrooks-Personal-Website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,6 +30,8 @@
     "start-front": "react-scripts start",
     "start-back": "node index.js",
     "server": "nodemon index.js",
+    "deploy":"gh-pages -d build",
+    "build" : "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run start-front\" \"npm run start-back\""
   },
   "eslintConfig": {
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.0.0",
     "nodemon": "^2.0.4"
   }
 }
