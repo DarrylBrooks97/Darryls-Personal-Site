@@ -8,14 +8,16 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/home" component={Home} />
-        <Route path="/techX" component={TechX} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/home" component={Home} />
+          <Route path="/techX" component={TechX} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </Router>
+    </BrowserRouter>
   );
 }
 

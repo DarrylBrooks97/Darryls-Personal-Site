@@ -5,6 +5,8 @@ const rateLimit = require("express-rate-limit");
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
+import Homepage from "./src/Home";
+
 require("dotenv").config();
 
 app.use(bodyParser.json());
@@ -41,7 +43,6 @@ app.post("/api/form", (req, res) => {
         console.log(`An Error has occurred: ${err}`);
       } else {
         res.send("success");
-        // console.log(data);
       }
     }
   );
