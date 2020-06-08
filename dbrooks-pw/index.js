@@ -5,7 +5,6 @@ const rateLimit = require("express-rate-limit");
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
-import Homepage from "./src/Home";
 
 require("dotenv").config();
 
