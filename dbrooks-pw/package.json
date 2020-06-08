@@ -30,8 +30,8 @@
     "start-front": "react-scripts start",
     "start-back": "node index.js",
     "server": "nodemon index.js",
-    "deploy":"gh-pages -d build",
-    "build" : "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run start-front\" \"npm run start-back\""
   },
   "eslintConfig": {
