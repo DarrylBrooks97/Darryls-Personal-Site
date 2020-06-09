@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import PageNavBar from "../src/Components/PageNavBar";
-import ContactBar from "../src/Components/ContactBar";
+import PageNavBar from "../Components/PageNavBar";
+import ContactBar from "../Components/ContactBar";
 import ReactRotatingText from "react-rotating-text";
 import "./TechX.css";
 import { Button } from "react-bootstrap";
@@ -18,7 +18,10 @@ function TechX() {
         <div aria-label="gallery" tabIndex="0" className="scroll-bar">
           <ul>
             <li>
-              <img src={require("./images/google.JPG")} alt="GoogleImage"></img>
+              <img
+                src={require("../images/google.JPG")}
+                alt="GoogleImage"
+              ></img>
               <h1>
                 <a
                   href="https://www.eng.famu.fsu.edu/news/darryl-brooks-accepted-in-google-tech-exchange-program"
@@ -57,7 +60,7 @@ function TechX() {
             </li>
             <li>
               <img
-                src={require("./images/syntech.jpeg")}
+                src={require("../images/syntech.jpeg")}
                 alt="SyntechImage"
               ></img>
               <h1>
@@ -95,7 +98,10 @@ function TechX() {
               </ul>
             </li>
             <li>
-              <img src={require("./images/cleanPic.JPG")} alt="UberImage"></img>
+              <img
+                src={require("../images/cleanPic.JPG")}
+                alt="UberImage"
+              ></img>
               <h1>
                 <a
                   href="https://uncf.org/programs/hbcu-innovation-summit"
@@ -128,7 +134,7 @@ function TechX() {
               </ul>
             </li>
             <li>
-              <img src={require("./images/GE.jpg")} alt="GEImage"></img>
+              <img src={require("../images/GE.jpg")} alt="GEImage"></img>
               <h1>
                 <a
                   href="https://www.geappliances.com/"
@@ -171,84 +177,84 @@ function TechX() {
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/cplusplus.png")}
+                src={require("../images/cplusplus.png")}
                 alt="c++"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/python.png")}
+                src={require("../images/python.png")}
                 alt="python"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/github.png")}
+                src={require("../images/github.png")}
                 alt="github"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/html.png")}
+                src={require("../images/html.png")}
                 alt="html"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/css.png")}
+                src={require("../images/css.png")}
                 alt="css"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/firebase.png")}
+                src={require("../images/firebase.png")}
                 alt="firebase"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/c.png")}
+                src={require("../images/c.png")}
                 alt="c"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/csharp.png")}
+                src={require("../images/csharp.png")}
                 alt="csharp"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/linux.png")}
+                src={require("../images/linux.png")}
                 alt="linux"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/node.png")}
+                src={require("../images/node.png")}
                 alt="node"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/photoshop.png")}
+                src={require("../images/photoshop.png")}
                 alt="photoshop"
               />
             </div>
             <div className="skill-icon">
               <img
                 className="tech-icon"
-                src={require("./images/reactjs.png")}
+                src={require("../images/reactjs.png")}
                 alt="reactjs"
               />
             </div>
@@ -262,7 +268,7 @@ function TechX() {
           <div className="projects">
             <div className="project-div">
               <img
-                src={require("./images/techbook.png")}
+                src={require("../images/techbook.png")}
                 className="picture-left"
                 alt="techbook"
               ></img>
@@ -305,7 +311,7 @@ function TechX() {
                 </div>
               </div>
               <img
-                src={require("./images/hackfsu.png")}
+                src={require("../images/hackfsu.png")}
                 className="picture-right"
                 alt="hackfsu"
               ></img>
@@ -314,7 +320,7 @@ function TechX() {
             <br></br>
             <div className="project-div">
               <img
-                src={require("./images/ac.png")}
+                src={require("../images/ac.png")}
                 className="picture-left"
                 alt="ac"
               ></img>
@@ -353,7 +359,7 @@ function TechX() {
           >
             <a
               download
-              href={require("./public/Brooks_Darryl_Resume.pdf")}
+              href={require("./Brooks_Darryl_Resume.pdf")}
               style={{ textDecoration: "none" }}
             >
               Grab a Copy

@@ -27,15 +27,15 @@ function PageNavBar(props) {
     if (redirect) {
       if (about && props.location !== "/home") {
         history.push(props.location);
-        return <Redirect to="../home" />;
+        return <Redirect to="/home" />;
       }
       if (techX && props.location !== "/techx") {
         history.push(props.location);
-        return <Redirect to="../techx" />;
+        return <Redirect to="/techx" />;
       }
       if (contact && props.location !== "/contact") {
         history.push(props.location);
-        return <Redirect to="../contact" />;
+        return <Redirect to="/contact" />;
       }
     }
   }

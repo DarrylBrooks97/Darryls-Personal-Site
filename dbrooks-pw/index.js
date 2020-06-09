@@ -13,19 +13,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(helmet());
 
+const PORT = process.env.PORT || 8080;
+
 app.use(
   rateLimit({
     windowMs: 60 * 1000,
     max: 3,
   })
 );
-app.post("/api/form", (req, res) => {
+app.post("#/api/form", (req, res) => {
+  console.log(req.pass);
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     secure: true,
     auth: {
       user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      pass: process.env.PASS,
     },
   });
 
@@ -39,6 +42,7 @@ app.post("/api/form", (req, res) => {
     (err, data) => {
       if (err) {
         res.send("fail");
+
         console.log(`An Error has occurred: ${err}`);
       } else {
         res.send("success");
@@ -46,8 +50,6 @@ app.post("/api/form", (req, res) => {
     }
   );
 });
-
-const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

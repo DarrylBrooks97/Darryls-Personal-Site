@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import PageNavBar from "./Components/PageNavBar";
-import ContactBar from "../src/Components/ContactBar";
+import PageNavBar from "../Components/PageNavBar";
+import ContactBar from "../Components/ContactBar";
 import "./home.css";
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
                 <div className="home-content-div">
                   <img
                     className="pictures"
-                    src={require("./images/IMG_1829.JPG")}
+                    src={require("../images/IMG_1829.JPG")}
                     alt="pic"
                   />
                 </div>
@@ -67,7 +67,7 @@ function Home() {
                 <div className="about-content-div">
                   <img
                     className="pictures"
-                    src={require("./images/MS.jpg")}
+                    src={require("../images/MS.jpg")}
                     alt="pic"
                   />
                 </div>
@@ -78,7 +78,7 @@ function Home() {
                 <div className="fun-fact-div">
                   <img
                     className="pictures"
-                    src={require("./images/IMG_4990.jpg")}
+                    src={require("../images/IMG_4990.jpg")}
                     alt="pic"
                   />
                 </div>
