@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import PageNavBar from "../src/Components/PageNavBar";
-import ContactBar from "../src/Components/ContactBar";
+import PageNavBar from "../Components/PageNavBar";
+import ContactBar from "../Components/ContactBar";
 import "./Contact.css";
 import { FormControl, Button, InputBase } from "@material-ui/core";
 import { fade, withStyles } from "@material-ui/core/styles";
@@ -42,7 +42,7 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-function handleSubmit(e) {
+function handleSubmit(e, props) {
   e.preventDefault();
   const name = document.getElementById("name").value;
   const mail = document.getElementById("mail").value;
@@ -60,12 +60,14 @@ function handleSubmit(e) {
     alert("Please enter a different email that is shorter");
     return;
   }
-
+  console.log(props.info.email);
   axios
-    .post("http://localhost:8080/api/form", {
+    .post("http://www.darryl-brooks/#/api/form", {
       name: name,
       mail: mail,
       message: message,
+      user: props.info.email,
+      pass: props.info.pass,
     })
     .then((e) => {
       if (e.data === "success") {
@@ -95,14 +97,14 @@ const customShrink = (id) => {
   document.getElementById(id).style.opacity = "1";
 };
 
-function TechX() {
+function TechX(props) {
   return (
     <div className="contact">
       <PageNavBar location="/contact" />
       <div className="contact-div">
         <div className="contact-headline">{"Contact"}</div>
         <div className="contact-title">{"Lets Chat"}</div>
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e, props)}>
           <div className="contact-info">
             <FormControl
               style={{
