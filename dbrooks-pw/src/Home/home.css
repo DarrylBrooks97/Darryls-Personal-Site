@@ -1,0 +1,75 @@
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, black 0%, #222 50%, black 100%);
+  width: 100%;
+  height: 100%;
+  display: table;
+  animation: fadeIn ease 3s;
+}
+
+.loader {
+  color: white;
+  font-family: Ubuntu Mono, sans-serif;
+  font-weight: bold;
+  animation-duration: 6s;
+  animation-name: spread;
+  animation-iteration-count: infinite;
+  transform: translatez(0, 0, 0);
+  text-transform: uppercase;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.3em;
+  letter-spacing: 5em;
+  text-indent: -100%;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spread {
+  from {
+    letter-spacing: 6em;
+    text-indent: -150%;
+  }
+  5% {
+  }
+  50% {
+    text-indent: 50%;
+    letter-spacing: 0.3em;
+  }
+  95% {
+  }
+  to {
+    letter-spacing: 6em;
+    text-indent: 120%;
+  }
+}
+@media (max-width: 850px) {
+  .loader {
+    animation-duration: 3s;
+  }
+  @keyframes spread {
+    from {
+      letter-spacing: 6em;
+      text-indent: -150%;
+    }
+    5% {
+    }
+    50% {
+      text-indent: 30%;
+      letter-spacing: 0.3em;
+    }
+    95% {
+    }
+    to {
+      letter-spacing: 6em;
+      text-indent: 120%;
+    }
+  }
+}
