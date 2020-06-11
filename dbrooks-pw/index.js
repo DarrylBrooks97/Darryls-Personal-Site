@@ -1,9 +1,10 @@
+const functions = require("firebase-functions");
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const rateLimit = require("express-rate-limit");
 const app = express();
-const cors = require("cors");
+const cors = require("cors")({ orgin: true });
 const helmet = require("helmet");
 
 require("dotenv").config();
@@ -15,14 +16,17 @@ app.use(helmet());
 
 const PORT = process.env.PORT || 8080;
 
+app.use(express.static(path.join(__dirname, "build")));
+
 app.use(
   rateLimit({
     windowMs: 60 * 1000,
     max: 3,
   })
 );
-app.post("#/api/form", (req, res) => {
-  console.log(req.pass);
+
+app.post("/api/form", (req, res) => {
+  alert(req.pass);
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     secure: true,

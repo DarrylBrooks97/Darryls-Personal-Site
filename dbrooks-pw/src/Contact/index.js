@@ -42,12 +42,13 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-function handleSubmit(e, props) {
+function handleSubmit(e) {
   e.preventDefault();
   const name = document.getElementById("name").value;
   const mail = document.getElementById("mail").value;
   const message = document.getElementById("message").value;
-
+  const API_URL =
+    "https://us-central1-db-personal-website.cloudfunctions.net/submit";
   if (message.length > 1000) {
     alert("Message size is too big !");
     return;
@@ -60,21 +61,24 @@ function handleSubmit(e, props) {
     alert("Please enter a different email that is shorter");
     return;
   }
-  console.log(props.info.email);
+  document.getElementById("submission").style.display = "block";
   axios
-    .post("http://www.darryl-brooks/#/api/form", {
+    .post(API_URL, {
       name: name,
       mail: mail,
       message: message,
-      user: props.info.email,
-      pass: props.info.pass,
     })
     .then((e) => {
       if (e.data === "success") {
+        document.getElementById("submission").style.display = "none";
         alert(
           "Thank you for contacting me. You should hear back within 1-3 days!"
         );
+        document.getElementById("submission").style.display = "none";
+        resetForm();
       } else {
+        console.log(e.data);
+        document.getElementById("submission").style.display = "none";
         alert(
           "Failed to send message. Try again or send me an email at darrylbrooks13@gmail.com !"
         );
@@ -83,8 +87,6 @@ function handleSubmit(e, props) {
     .catch((e) => {
       alert(e);
     });
-
-  resetForm();
 }
 function resetForm() {
   document.getElementById("name").value = "";
@@ -104,7 +106,7 @@ function TechX(props) {
       <div className="contact-div">
         <div className="contact-headline">{"Contact"}</div>
         <div className="contact-title">{"Lets Chat"}</div>
-        <form onSubmit={(e) => handleSubmit(e, props)}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <div className="contact-info">
             <FormControl
               style={{
@@ -155,6 +157,7 @@ function TechX(props) {
           </div>
           <div
             style={{
+              display: "block",
               width: "40%",
               margin: "1% 0px 3% 30%",
               textAlign: "center",
@@ -173,6 +176,20 @@ function TechX(props) {
             >
               Submit
             </Button>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "3% 0% 0% 0%",
+              }}
+            >
+              <img
+                src={require("../images/loading.gif")}
+                className="loading-submission"
+                id="submission"
+                alt="loading..."
+              />
+            </div>
           </div>
         </form>
         <div style={{ display: "flex", justifyContent: "center" }}>

@@ -43,7 +43,11 @@
   opacity: 0;
   color: #e2c044;
 }
-
+.loading-submission {
+  display: none;
+  width: 10%;
+  height: 10%;
+}
 @media (max-width: 850px) {
   .contact {
     display: block;
@@ -59,5 +63,8 @@
   }
   .contact-info {
     display: block;
+  }
+  .loading-submission {
+    width: 30%;
   }
 }
