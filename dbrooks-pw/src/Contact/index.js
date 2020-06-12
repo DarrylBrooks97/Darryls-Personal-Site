@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNavBar from "../Components/PageNavBar";
 import ContactBar from "../Components/ContactBar";
@@ -42,7 +42,7 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-function handleSubmit(e) {
+function handleSubmit(e, setWait) {
   e.preventDefault();
   const name = document.getElementById("name").value;
   const mail = document.getElementById("mail").value;
@@ -74,6 +74,7 @@ function handleSubmit(e) {
         alert(
           "Thank you for contacting me. You should hear back within 1-3 days!"
         );
+        setWait(true);
         document.getElementById("submission").style.display = "none";
         resetForm();
       } else {
@@ -100,13 +101,22 @@ const customShrink = (id) => {
 };
 
 function TechX(props) {
+  const [wait, setWait] = useState(false);
+
+  if (wait) {
+    Promise.resolve(() => {
+      setTimeout(() => {
+        setWait(false);
+      }, 5000);
+    });
+  }
   return (
     <div className="contact">
       <PageNavBar location="/contact" />
       <div className="contact-div">
         <div className="contact-headline">{"Contact"}</div>
         <div className="contact-title">{"Lets Chat"}</div>
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e, setWait)}>
           <div className="contact-info">
             <FormControl
               style={{
@@ -163,19 +173,36 @@ function TechX(props) {
               textAlign: "center",
             }}
           >
-            <Button
-              variant="contained"
-              type="submit"
-              style={{
-                backgroundColor: "#e2c044",
-                textTransform: "capitalize",
-                color: "#3f4043",
-                fontFamily: "Montserrat",
-              }}
-              size="large"
-            >
-              Submit
-            </Button>
+            {!wait ? (
+              <Button
+                variant="contained"
+                type="submit"
+                style={{
+                  backgroundColor: "#e2c044",
+                  textTransform: "capitalize",
+                  color: "#3f4043",
+                  fontFamily: "Montserrat",
+                }}
+                size="large"
+              >
+                Submit
+              </Button>
+            ) : (
+              <Button
+                variant="contained"
+                style={{
+                  backgroundColor: "#e2c044",
+                  textTransform: "capitalize",
+                  color: "#3f4043",
+                  fontFamily: "Montserrat",
+                }}
+                size="large"
+                disabled
+              >
+                Thank you for the submission!
+              </Button>
+            )}
+
             <div
               style={{
                 display: "flex",
