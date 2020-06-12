@@ -263,7 +263,7 @@ function TechX() {
         <br></br>
         <br></br>
         <div className="tech-skills-div">
-          <h1 className="tech-skills">Some things I've built</h1>
+          <h1 className="tech-skills">Software Projects</h1>
           <hr style={{ width: "50vw" }}></hr>
           <div className="projects">
             <div className="project-div">

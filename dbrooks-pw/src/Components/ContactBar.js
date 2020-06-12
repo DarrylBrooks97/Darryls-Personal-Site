@@ -33,7 +33,7 @@ function ContactBar() {
         </li>
         <li>
           <a
-            href="https://www.instagram.com/Apxflex"
+            href="https://www.instagram.com/DarrylBrooks97"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -27,7 +27,7 @@ function Home() {
                     <hr></hr>
                     Darryl Brooks, an upcoming Software Engineer, was born in
                     Tampa, FL however, was raised in Jacksonville, FL. As a
-                    child he always had a fasination in sciene & technology,
+                    child he always had a fasination in science & technology,
                     where he was always curious on how computers worked. His
                     parents put him to the test and enrolled him at Robert E.
                     Lee High School for their rigorous Engineering program. From
