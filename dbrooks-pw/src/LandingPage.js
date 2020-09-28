@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
 import ReactRotatingText from "react-rotating-text";
-import { Redirect, useHistory } from "react-router-dom";
-
+import { Redirect } from "react-router-dom";
+import history from "../src/history";
 function LandingPage() {
   const [redirect, setRedirect] = useState(false);
-  let history = useHistory();
 
   function routeChange() {
     if (redirect) {

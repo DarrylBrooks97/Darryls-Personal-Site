@@ -283,7 +283,7 @@ function TechX() {
                 </div>
                 <div className="used-tech-right">
                   <ul>
-                    <li>React</li>
+                    <li>React JS</li>
                     <li>Node.js</li>
                     <li>Firebase</li>
                   </ul>
@@ -294,7 +294,15 @@ function TechX() {
             <br></br>
             <div className="project-div">
               <div className="floating-text-left" style={{ order: "1" }}>
-                <h1 className="tech-skills">Priority Task Scheduler</h1>
+                <h1 className="tech-skills">
+                  <a
+                    href="https://github.com/DarrylBrooks97/HackFSU-2019"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Priority Task Scheduler
+                  </a>
+                </h1>
                 <div className="caption-textbox-left">
                   A hackathon creation built for incoming college students to
                   learn how priotize their assignments with daily life events.
@@ -320,23 +328,32 @@ function TechX() {
             <br></br>
             <div className="project-div">
               <img
-                src={require("../images/ac.png")}
+                src={require("../images/iycw.png")}
                 className="picture-left"
                 alt="ac"
               ></img>
               <div className="floating-text-right">
-                <h1 className="tech-skills">AirWise</h1>
+                <h1 className="tech-skills">
+                  <a
+                    href="https://github.com/mikaylaorange/iycw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    If You Can't Walk
+                  </a>
+                </h1>
                 <div className="caption-textbox-right">
-                  A Senior Design class project built using machine learning to
-                  predict user's preferred temperature within individual rooms.
-                  This device is portable and allows multiple users to have
-                  their own individualized room temperature.
+                  This platform is a guide for those who would like to help the
+                  #BlackLivesMatter community in the fight for social injustice.
+                  As Black people in the United States we face many cases of
+                  racial discrimination to a day to day basis, and we'd like to
+                  take a stand.
                 </div>
                 <div className="used-tech-right">
                   <ul>
-                    <li>Python</li>
-                    <li>Raspberry Pi</li>
-                    <li>Tensor Flow</li>
+                    <li>React JS</li>
+                    <li>Firebase</li>
+                    <li>Material UI</li>
                   </ul>
                 </div>
               </div>

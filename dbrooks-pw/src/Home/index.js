@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
 import ReactRotatingText from "react-rotating-text";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import history from "../history";
 import "./home.css";
 
 function LandingPage() {
   const [redirect, setRedirect] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  let history = useHistory();
 
   function routeChange() {
     if (redirect) {
@@ -23,7 +23,7 @@ function LandingPage() {
     } else {
       setTimeout(() => {
         setLoaded(true);
-      }, 5000);
+      }, 4000);
     }
   }
   return (
