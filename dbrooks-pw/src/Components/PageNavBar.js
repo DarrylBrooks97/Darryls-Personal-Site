@@ -4,8 +4,8 @@ import { Navbar, Nav } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Redirect, useHistory } from "react-router-dom";
-
+import { Redirect } from "react-router-dom";
+import history from "../history";
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
@@ -21,7 +21,6 @@ function PageNavBar(props) {
   const [about, setAbout] = useState(false);
   const [techX, setTechX] = useState(false);
   const [contact, setContact] = useState(false);
-  let history = useHistory();
 
   function routeChange() {
     if (redirect) {

@@ -26,15 +26,15 @@ function Home() {
                     About Me
                     <hr></hr>
                     Darryl Brooks, an upcoming Software Engineer, was born in
-                    Tampa, FL however, was raised in Jacksonville, FL. As a
-                    child he always had a fasination in science & technology,
-                    where he was always curious on how computers worked. His
-                    parents put him to the test and enrolled him at Robert E.
-                    Lee High School for their rigorous Engineering program. From
-                    there he knew he wanted to use his technical abilities to
-                    make a change in the technology industry. Soon applying to
-                    one of the best universities in the state of Florida for
-                    Computer Engineering,
+                    Tampa, FL byway Jacksonville, FL. As a child he always had a
+                    fascination with science & technology, where he was always
+                    curious on how computers worked. His parents put him to the
+                    test and enrolled him at Robert E. Lee High School for their
+                    rigorous Engineering program. From there he knew he wanted
+                    to use his technical abilities to make a change in the
+                    technology industry. Soon applying for one of the best
+                    universities in the state of Florida for Computer
+                    Engineering,
                     <a
                       href="https://www.famu.edu"
                       target="_blank"
@@ -57,10 +57,10 @@ function Home() {
                     <hr></hr>
                     <ul className="lists">
                       <li>Full-Stack Development</li>
-                      <li>Mobile App Development</li>
+                      <li>Aquatics</li>
                       <li>Basketball</li>
                       <li>Hiking</li>
-                      <li>Music</li>
+                      <li>Billards</li>
                     </ul>
                   </h1>
                 </div>

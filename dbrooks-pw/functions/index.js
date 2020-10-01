@@ -6,7 +6,7 @@ const clientSecret = functions.config().credentials.clientsecret;
 const email = functions.config().credentials.email;
 const refreshToken = functions.config().credentials.refreshtoken;
 const accessToken = functions.config().credentials.accesstoken;
-const accessUrl = functions.config().accessurl;
+const accessUrl = functions.config().credentials.accessurl;
 
 exports.submit = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
@@ -29,10 +29,10 @@ exports.submit = functions.https.onRequest((req, res) => {
     });
     let info = transporter.sendMail(
       {
-        from: `From ${req.body.mail} <${req.body.mail}>`, // sender address
+        from: `From ${req.body.mail} <${req.body.mail}>`,
         to: email, // list of receivers
-        subject: `New Message from ${req.body.name} !`, // Subject line
-        text: `${req.body.message}`, // plain text body
+        subject: `${req.body.name} messaged you from your website!`,
+        html: `<div><h2 style="padding-bottom:2%;">${req.body.message}</h2><p>Message ${req.body.name} back at <a style="text-decoration:none;" href="mailto:${req.body.mail}">${req.body.mail}</a></p></div>`,
       },
       (err, data) => {
         if (err) {
