@@ -45,6 +45,7 @@ jobs:
       - update
       - build
   deploy_site:
+  executor: docker-executor
     steps:
       - update
       - deploy
