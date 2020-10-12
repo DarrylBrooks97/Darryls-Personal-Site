@@ -28,15 +28,15 @@ commands:
           command: sudo npm run build
       - run:
           name: Deploy
-          command: sudo ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN -- only hosting
 executors:
   docker-executor:
     docker:
       - image: "cimg/node:12.14.1"
 jobs:
-  working_directory: ~/Darryls-Personal-Site
   build_site:
     executor: docker-executor
+    working_directory: ~/Darryls-Personal-Site
     steps:
       - update
       - build_deploy
