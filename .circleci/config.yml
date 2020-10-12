@@ -9,7 +9,7 @@ commands:
     description: "Saving npm install"
     steps:
       - save_cache:
-          key: 'dependency-cache-{{ cachesum "package.json"}}'
+          key: 'dependency-cache-{{ checksum "package.json"}}'
           paths:
             - "./node_modules"
   update:
@@ -31,6 +31,7 @@ executors:
     docker:
       - image: "cimg/node:12.14.1"
 jobs:
+  working_directory: ~/Darryls-Personal-Site
   deploy_site:
     executor: docker-executor
     steps:
