@@ -32,7 +32,8 @@ commands:
     description: "Deploying project"
     steps:
       - checkout
-      - restore_cache_cmd
+      - restore_cache_cm
+      - run: sudo chown -R $USER ~/.config/configstore
       - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
       - save_cache_cmd
 executors:
