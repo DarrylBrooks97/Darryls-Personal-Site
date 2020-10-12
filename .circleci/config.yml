@@ -13,11 +13,12 @@ commands:
           paths:
             - "./node_modules"
   update:
-    description: "Updating project"
+    description: "Installing project's dependencies"
     steps:
       - checkout
       - restore_cache_cmd
       - run: sudo npm i -g npm@latest
+      - run: npm install -g firebase-tools
       - run: sudo npm i
       - save_cache_cmd
   build:
