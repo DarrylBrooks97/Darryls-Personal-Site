@@ -33,7 +33,7 @@ commands:
     steps:
       - checkout
       - restore_cache_cmd
-      - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
+      - run: sudo ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
       - save_cache_cmd
 executors:
   docker-executor:
@@ -55,7 +55,10 @@ version: 2.1
 workflows:
   build_site:
     jobs:
-      - build_site
+      - build_site:
+          filters:
+            branches:
+              only: master
       - deploy_site:
           requires:
             - build_site
