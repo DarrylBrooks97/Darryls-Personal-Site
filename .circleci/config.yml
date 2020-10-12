@@ -18,24 +18,18 @@ commands:
       - checkout
       - restore_cache_cmd
       - run: sudo npm i -g npm@latest
-      - run: sudo npm install -g firebase-tools && sudo npm install -D firebase-tools
       - run: sudo npm i
       - save_cache_cmd
-  build:
+  build_deploy:
     description: "Building project"
     steps:
       - checkout
-      - restore_cache_cmd
-      - run: sudo npm run build
-      - save_cache_cmd
-  deploy:
-    description: "Deploying project"
-    steps:
-      - checkout
-      - restore_cache_cmd
-      - run: sudo chown -R $USER ~/.config/configstore
-      - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
-      - save_cache_cmd
+      - run:
+          name: Build
+          command: sudo npm run build
+      - run:
+          name: Deploy
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
     docker:
@@ -46,23 +40,12 @@ jobs:
     executor: docker-executor
     steps:
       - update
-      - build
-  deploy_site:
-    executor: docker-executor
-    steps:
-      - update
-      - deploy
+      - build_deploy
 version: 2.1
 workflows:
   build_site:
     jobs:
       - build_site:
-          filters:
-            branches:
-              only: master
-      - deploy_site:
-          requires:
-            - build_site
           filters:
             branches:
               only: master
