@@ -33,7 +33,7 @@
     "start": "react-scripts start",
     "start-back": "node index.js",
     "server": "nodemon index.js",
-    "deploy": "firebase deploy --only hosting",
+    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting",
     "build": "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run start-front\" \"npm run start-back\""
   },

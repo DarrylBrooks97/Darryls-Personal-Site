@@ -33,7 +33,7 @@ commands:
     steps:
       - checkout
       - restore_cache_cmd
-      - run: sudo npm run deploy
+      - run: npm deploy
       - save_cache_cmd
 executors:
   docker-executor:
