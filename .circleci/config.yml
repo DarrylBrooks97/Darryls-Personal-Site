@@ -28,7 +28,10 @@ commands:
           command: sudo npm run build
       - run:
           name: Deploy
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN -- only hosting
+          command: |
+            sudo chmod 604 /home/circleci/.config/configstore/firebase-tools.json
+            ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN -- only hosting
+            sudo chmod 600 /home/circleci/.config/configstore/firebase-tools.json
 executors:
   docker-executor:
     docker:
