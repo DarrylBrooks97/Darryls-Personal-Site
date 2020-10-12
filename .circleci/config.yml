@@ -23,13 +23,12 @@ commands:
   build_deploy:
     description: "Building project"
     steps:
-      - checkout
       - run:
           name: Build
           command: sudo npm run build
       - run:
           name: Deploy
-          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
+          command: ./node_modules/.bin/firebase deploy --token="$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
     docker:
