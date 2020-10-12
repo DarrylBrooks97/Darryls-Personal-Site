@@ -1,13 +1,5 @@
 ---
 commands:
-  build:
-    steps:
-      - checkout
-      - restore_cache_cmd
-      - command: "sudo npm i -g npm@latest"
-        name: "update npm"
-        run: ~
-      - save_cache_cmd
   restore_cache_cmd:
     steps:
       - restore_cache:
@@ -18,6 +10,15 @@ commands:
           key: 'dependency-cache-{{ cachesum "package.json"}}'
           paths:
             - ./node_modules
+  build:
+    steps:
+      - checkout
+      - restore_cache_cmd
+      - command: "sudo npm i -g npm@latest"
+        name: "update npm"
+        run: ~
+      - save_cache_cmd
+
 executors:
   docker-executor:
     docker:
