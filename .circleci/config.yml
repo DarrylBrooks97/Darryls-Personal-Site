@@ -1,5 +1,5 @@
 ---
-commands:
+commands: |
   restore_cache_cmd:
     steps:
       - restore_cache:
@@ -9,7 +9,7 @@ commands:
       - save_cache:
           key: 'dependency-cache-{{ cachesum "package.json"}}'
           paths:
-            - ./node_modules
+            - ['./node_modules']
   build:
     steps:
       - checkout
