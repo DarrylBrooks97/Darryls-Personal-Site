@@ -13,7 +13,7 @@ commands:
           paths:
             - "./node_modules"
   update:
-    description: "Building project"
+    description: "Updating project"
     steps:
       - checkout
       - restore_cache_cmd
@@ -27,12 +27,12 @@ commands:
       - run: sudo npm run build
       - save_cache_cmd
   deploy:
-  description: "Deploying project"
-  steps:
-    - checkout
-    - restore_cache_cmd
-    - run: sudo npm run deploy
-    - save_cache_cmd
+    description: "Deploying project"
+    steps:
+      - checkout
+      - restore_cache_cmd
+      - run: sudo npm run deploy
+      - save_cache_cmd
 executors:
   docker-executor:
     docker:
@@ -46,6 +46,7 @@ jobs:
       - build
   deploy_site:
     steps:
+      - update
       - deploy
 version: 2.1
 workflows:
