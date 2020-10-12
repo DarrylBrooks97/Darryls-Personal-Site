@@ -17,14 +17,15 @@ commands:
     steps:
       - checkout
       - restore_cache_cmd
-      - run:
-        command: sudo npm i -g npm@latest
+      - run: sudo npm i -g npm@latest
       - save_cache_cmd
   deploy:
     description: "Deploying project"
     steps:
-      - run:
-        command: sudo npm run deploy
+      - checkout
+      - restore_cache_cmd
+      - run: sudo npm run deploy
+      - save_cache_cmd
 executors:
   docker-executor:
     docker:
