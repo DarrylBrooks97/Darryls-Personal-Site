@@ -18,6 +18,7 @@ commands:
       - checkout
       - restore_cache_cmd
       - run: sudo npm i -g npm@latest
+      - run: sudp npm i
       - save_cache_cmd
   build:
     description: "Building project"
