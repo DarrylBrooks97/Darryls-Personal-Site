@@ -1,22 +1,24 @@
 ---
-commands: |
+commands:
   restore_cache_cmd:
+    description: "Restore cached npm install"
     steps:
       - restore_cache:
           key: 'dependency-cache-{{checksum "package.json"}}'
   save_cache_cmd:
+    description: "Saving npm install"
     steps:
       - save_cache:
           key: 'dependency-cache-{{ cachesum "package.json"}}'
           paths:
-            - ['./node_modules']
+            - "./node_modules"
   build:
+    description: "Building project"
     steps:
       - checkout
       - restore_cache_cmd
-      - command: "sudo npm i -g npm@latest"
-        name: "update npm"
-        run: ~
+      - run:
+        command: "sudo npm i -g npm@latest"
       - save_cache_cmd
 
 executors:
