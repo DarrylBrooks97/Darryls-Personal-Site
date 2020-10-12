@@ -1,40 +1,34 @@
-version: 2.1
-
+---
 commands:
-  restore_cache_cmd:
-    steps:
-      - restore_cache:
-          key: dependency-cache-{{checksum "package.json"}}
-  save_cache_cmd:
-    steps:
-      - save_cache:
-          key: dependency-cache-{{ cachesum "package.json"}}
-          paths: - ./node_modules
   build:
     steps:
       - checkout
       - restore_cache_cmd
-      - run:
-        name: update npm
-        command: "sudo npm i -g npm@latest"
+      - command: "sudo npm i -g npm@latest"
+        name: "update npm"
+        run: ~
       - save_cache_cmd
-
+  restore_cache_cmd:
+    steps:
+      - restore_cache:
+          key: 'dependency-cache-{{checksum "package.json"}}'
+  save_cache_cmd:
+    steps:
+      - save_cache:
+          key: 'dependency-cache-{{ cachesum "package.json"}}'
+          paths:
+            - ./node_modules
 executors:
   docker-executor:
     docker:
-      - image: cimg/node:12.14.1
-
+      - image: "cimg/node:12.14.1"
 jobs:
   build_site:
     executor: docker-executor
     steps:
       - build
-
+version: 2.1
 workflows:
   build_site:
     jobs:
       - build_site
- 
-      
-      
-  
