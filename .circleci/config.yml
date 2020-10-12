@@ -1,40 +1,63 @@
-version: 2.1
-
+---
 commands:
   restore_cache_cmd:
+    description: "Restore cached npm install"
     steps:
       - restore_cache:
-          key: dependency-cache-{{checksum "package.json"}}
+          key: 'dependency-cache-{{checksum "package.json"}}'
   save_cache_cmd:
+    description: "Saving npm install"
     steps:
       - save_cache:
-          key: dependency-cache-{{ cachesum "package.json"}}
-          paths: - ./node_modules
-  build:
+          key: 'dependency-cache-{{ checksum "package.json"}}'
+          paths:
+            - "./node_modules"
+  update:
+    description: "Updating project"
     steps:
       - checkout
       - restore_cache_cmd
-      - run:
-        name: update npm
-        command: "sudo npm i -g npm@latest"
+      - run: sudo npm i -g npm@latest
+      - run: sudo npm i
       - save_cache_cmd
-
+  build:
+    description: "Building project"
+    steps:
+      - checkout
+      - restore_cache_cmd
+      - run: sudo npm run build
+      - save_cache_cmd
+  deploy:
+    description: "Deploying project"
+    steps:
+      - checkout
+      - restore_cache_cmd
+      - run: sudo npm run deploy
+      - save_cache_cmd
 executors:
   docker-executor:
     docker:
-      - image: cimg/node:12.14.1
-
+      - image: "cimg/node:12.14.1"
 jobs:
+  working_directory: ~/Darryls-Personal-Site
   build_site:
     executor: docker-executor
     steps:
+      - update
       - build
-
+  deploy_site:
+    executor: docker-executor
+    steps:
+      - update
+      - deploy
+version: 2.1
 workflows:
   build_site:
     jobs:
       - build_site
- 
-      
-      
-  
+      - deploy_site:
+          requires:
+            - build_site
+          filters:
+            branches:
+              only: master
