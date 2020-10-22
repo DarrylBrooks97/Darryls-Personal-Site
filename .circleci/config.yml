@@ -18,10 +18,10 @@ commands:
       - checkout
       - restore_cache_cmd
       - run: 
-        name: Installing environment
-        command: |
-          npm i -g npm@latest
-          npm i
+          name: Installing environment
+          command: |
+            npm i -g npm@latest
+            npm i
       - save_cache_cmd
   build_deploy:
     description: "Building project"
