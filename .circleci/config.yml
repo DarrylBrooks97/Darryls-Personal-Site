@@ -20,8 +20,8 @@ commands:
       - run: 
           name: Installing environment
           command: |
-            npm i -g npm@latest
-            npm i
+            sudo npm i -g npm@latest
+            sudo npm i
       - save_cache_cmd
   build_deploy:
     description: "Building project"
