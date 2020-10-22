@@ -17,21 +17,22 @@ commands:
     steps:
       - checkout
       - restore_cache_cmd
-      - run: sudo npm i -g npm@latest
-      - run: sudo npm i
+      - run: 
+        name: Installing environment
+        command: |
+          npm i -g npm@latest
+          npm i
       - save_cache_cmd
   build_deploy:
     description: "Building project"
     steps:
       - run:
           name: Build
-          command: sudo npm run build
+          command: npm run build
       - run:
           name: Deploy
           command: |
-            sudo chmod 604 /home/circleci/.config/configstore/firebase-tools.json
-            ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN -- only hosting
-            sudo chmod 600 /home/circleci/.config/configstore/firebase-tools.json
+            npx run firebase deploy --token=$FIREBASE_DEPLOY_TOKEN -- only hosting
 executors:
   docker-executor:
     docker:
