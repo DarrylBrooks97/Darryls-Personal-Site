@@ -35,9 +35,10 @@ commands:
       - run:
           name: Deploy
           command: |
+            cd ..
             pwd
             ls -la
-            chmod -R 755 ~/.config/configstore
+            sudo chmod -R 755 ~/.config/configstore
             ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
