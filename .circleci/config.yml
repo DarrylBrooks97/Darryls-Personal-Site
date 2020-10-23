@@ -21,7 +21,7 @@ commands:
           name: Installing environment
           command: |
             pwd
-            ls -la
+            npm config get prefix
             sudo npm i -g npm@latest
             sudo npm i
       - save_cache_cmd
@@ -35,8 +35,11 @@ commands:
       - run:
           name: Deploy
           command: |
-            pwd
+            cd ..
             ls -la
+            sudo chmod -R 777 .config
+            ls -la 
+            cd project
             ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
@@ -45,7 +48,6 @@ executors:
 jobs:
   build_site:
     executor: docker-executor
-    working_directory: ~/Darryls-Personal-Site
     steps:
       - update
       - build_deploy
