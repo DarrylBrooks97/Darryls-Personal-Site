@@ -37,7 +37,7 @@ commands:
           command: |
             cd ..
             ls -la
-            sudo chmod -R 755 .config
+            sudo chmod -R 777 .config
             ls -la 
             cd project
             ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
