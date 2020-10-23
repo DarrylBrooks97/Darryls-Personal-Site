@@ -37,6 +37,7 @@ commands:
           command: |
             pwd
             ls -la
+            chmod -R 755 ~/configstore
             ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
@@ -45,10 +46,9 @@ executors:
 jobs:
   build_site:
     executor: docker-executor
-#     working_directory: ~/
     steps:
       - update
-#       - build_deploy
+      - build_deploy
 version: 2.1
 workflows:
   build_site:
