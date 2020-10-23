@@ -32,7 +32,7 @@ commands:
       - run:
           name: Deploy
           command: |
-            ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
+            sudo ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
     docker:
