@@ -4,38 +4,38 @@ commands:
     description: "Building project"
     steps:
       - run:
-          command: "npm run build"
+          command: npm run build
           name: Build
       - run:
-          command: "./node_modules/.bin/firebase deploy --token \"$FIREBASE_TOKEN\" -- only hosting\n"
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
           name: Deploy
   restore_cache_cmd:
     description: "Restore cached npm install"
     steps:
       - restore_cache:
           keys:
-            - dependency-cache-{{checksum "package.json"}}
-            - dependency-cache-
+            - v1-npm-deps-{{checksum "package.json"}}
+            - v1-npm-deps-
   save_cache_cmd:
     description: "Saving npm install"
     steps:
       - save_cache:
           keys:
-            - dependency-cache-{{checksum "package.json"}}
+            - v1-npm-deps-{{checksum "package.json"}}
           paths:
-            - node_modules
+            - ./node_modules
   update:
     description: "Installing project's dependencies"
     steps:
       - restore_cache_cmd
       - run:
-          command: "npm install"
+          command: npm install
           name: "Installing environment"
       - save_cache_cmd
 executors:
   docker-executor:
     docker:
-      - image: "node:8.15"
+      - image: circleci/node:10
 jobs:
   build_site:
     executor: docker-executor
