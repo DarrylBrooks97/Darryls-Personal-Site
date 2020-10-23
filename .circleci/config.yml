@@ -20,7 +20,7 @@ commands:
     description: "Saving npm install"
     steps:
       - save_cache:
-          keys:
+          key:
             - v1-npm-deps-{{checksum "package.json"}}
           paths:
             - ./node_modules
