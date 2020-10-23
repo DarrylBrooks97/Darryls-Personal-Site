@@ -37,10 +37,10 @@ commands:
           command: |
             cd ..
             ls -la
-            sudo chmod -R 755 ~/.config
+            sudo chmod -R 755 .config
             ls -la 
             cd project
-            #./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
+            ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
     docker:
