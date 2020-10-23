@@ -4,51 +4,44 @@ commands:
     description: "Restore cached npm install"
     steps:
       - restore_cache:
-          key: 'dependency-cache-{{checksum "package.json"}}'
+          keys:
+            - dependency-cache-{{checksum "package.json"}}
+            - dependency-cache-
   save_cache_cmd:
     description: "Saving npm install"
     steps:
       - save_cache:
-          key: 'dependency-cache-{{ checksum "package.json"}}'
           paths:
-            - "./node_modules"
+            - node_modules
+          keys:
+            - dependency-cache-{{checksum "package.json"}}
   update:
     description: "Installing project's dependencies"
     steps:
-      - checkout
       - restore_cache_cmd
-      - run: 
+      - run:
           name: Installing environment
-          command: |
-            pwd
-            npm config get prefix
-            sudo npm i -g npm@latest
-            sudo npm i
+          command: npm install
       - save_cache_cmd
   build_deploy:
     description: "Building project"
     steps:
-      - checkout
       - run:
           name: Build
           command: npm run build
       - run:
           name: Deploy
           command: |
-            cd ..
-            ls -la
-            sudo chmod -R 777 .config
-            ls -la 
-            cd project
             ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
     docker:
-      - image: "cimg/node:12.14.1"
+      - image: node:8.15
 jobs:
   build_site:
     executor: docker-executor
     steps:
+      - checkout
       - update
       - build_deploy
 version: 2.1
