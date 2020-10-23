@@ -32,7 +32,7 @@ commands:
       - run:
           name: Deploy
           command: |
-            npm run firebase deploy --token=$FIREBASE_DEPLOY_TOKEN -- only hosting
+            ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
   docker-executor:
     docker:
