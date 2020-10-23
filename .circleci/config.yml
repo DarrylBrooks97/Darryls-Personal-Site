@@ -45,7 +45,7 @@ executors:
 jobs:
   build_site:
     executor: docker-executor
-    working_directory: ~/Darryls-Personal-Site
+    working_directory: ~/
     steps:
       - update
       - build_deploy
