@@ -35,10 +35,10 @@ commands:
       - run:
           name: Deploy
           command: |
-            sudo chmod -R 755 ~/.config/configstore
-            cd .. 
-            pwd
-            ls -la .config/configstore
+            cd ..
+            ls -la
+            sudo chmod -R 755 ~/.config
+            ls -la 
             cd project
             #./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" -- only hosting
 executors:
