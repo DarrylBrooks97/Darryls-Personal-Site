@@ -7,7 +7,7 @@ commands:
           command: npm run build
           name: Build
       - run:
-          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
           name: Deploy
   restore_cache_cmd:
     description: "Restore cached npm install"
