@@ -225,8 +225,10 @@ function TechX() {
           >
             <a
               download
-              href={require("./Brooks_Darryl_Resume.pdf")}
+              href="https://drive.google.com/file/d/1I5NITRNZOYTlhfnDwbM5rUitjeQRITpE/view?usp=sharing"
               style={{ textDecoration: "none" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Grab a Copy
               <span role="img" aria-label="inbox-emoji">
