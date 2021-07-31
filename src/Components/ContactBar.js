@@ -42,7 +42,7 @@ function ContactBar() {
 				</li>
 				<li>
 					<a
-						href='https://www.twitter.com/DarrylB97'
+						href='https://www.twitter.com/darryl_codes'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
